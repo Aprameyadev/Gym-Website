@@ -1,0 +1,232 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY BACKGROUND */
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    scroll-behavior: smooth;
+    /* Keeps the dark overlay so text is readable over your gymimage.png */
+    background: 
+        linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+        url("gymimage.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* HEADER & NAVIGATION */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    position:relative
+    width: 100%;
+    top: 0;
+    background: transparent;
+    z-index: 1000;
+    transition: 0.3s ease; /* Smooth transition for when JS adds a background */
+}
+
+.logo img {
+    width: 70px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff4d4d; /* Gym accent color (Red) */
+}
+
+/* HERO SECTION */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 120px 20px 60px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 55px;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Helps text pop without needing a box */
+}
+
+.hero p {
+    font-size: 20px;
+    max-width: 800px;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+}
+
+/* PRIMARY HERO BUTTON */
+.btn-primary {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 15px 35px;
+    background-color: #ff4d4d;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 77, 77, 0.4);
+}
+
+.btn-primary:hover {
+    background-color: #e60000;
+    transform: scale(1.05);
+}
+
+/* GENERAL SECTION & GLASSMORPHISM STYLING */
+section {
+    padding: 80px 60px;
+    text-align: center;
+}
+
+/* Grouped Glass Panels to keep code DRY */
+#about, #services, #contact {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px); /* Safari support */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    margin: 40px auto; 
+    max-width: 1000px; /* Prevents the boxes from stretching too wide on PC */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #ff4d4d;
+}
+
+section p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* CARD CONTAINER */
+.card-container {
+    display: flex;
+    justify-content: center; /* Centers the single card */
+    margin: 40px 0;
+}
+
+/* FAT LOSS CARD STYLING */
+#card-fat-loss {
+    width: 100%;
+    max-width: 500px;
+    padding: 50px 40px;
+    border-radius: 20px;
+    color: white;
+    background: rgba(0, 0, 0, 0.4); /* Darker background inside the glass panel for contrast */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    transition: 0.3s ease;
+}
+
+#card-fat-loss:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 35px rgba(255, 77, 77, 0.3);
+    border-color: #ff4d4d;
+}
+
+.card-icon {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+#card-fat-loss h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #ff4d4d;
+}
+
+#card-fat-loss p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #e0e0e0;
+}
+
+/* CARD BUTTON (Outlined Style) */
+.card-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: transparent;
+    color: #ff4d4d;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid #ff4d4d;
+    border-radius: 25px;
+    transition: 0.3s ease;
+}
+
+.card-btn:hover {
+    background-color: #ff4d4d;
+    color: white;
+    box-shadow: 0 4px 15px rgba(255, 77, 77, 0.4);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.9);
+    font-size: 14px;
+    margin-top: 40px;
+}
+
+/* RESPONSIVE DESIGN FOR MOBILE */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.8); /* Ensures nav is visible on mobile */
+    }
+    
+    nav ul {
+        margin-top: 15px;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    section {
+        padding: 60px 20px;
+        margin: 20px;
+    }
+
+    #card-fat-loss {
+        padding: 30px 20px;
+    }
+}
