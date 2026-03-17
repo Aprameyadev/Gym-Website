@@ -13,105 +13,333 @@
   <meta name="author" content="Torq Fitness And Education Center">
 
   <link rel="icon" type="image/png" href="logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
-  <div class="logo">
+<header class="site-header">
+  <a class="brand" href="#home">
     <img src="logo.png" alt="Torq Fitness Logo">
-  </div>
-  <nav>
-    <ul>
+    <span class="brand-name">Torq Fitness And Education Center</span>
+  </a>
+
+  <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <nav id="site-nav" class="nav">
+    <ul class="nav-list">
       <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
+      <li><a href="#plans">Plans</a></li>
+      <li><a href="#trainers">Trainers</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+    <a href="#contact" class="btn btn-outline">Start Your Fitness Journey</a>
   </nav>
 </header>
 
-<section class="hero">
-  <div class="hero-content">
-    <h1>Best Gym in Dharwad – Torq Fitness And Education Center</h1>
-    <p>Transform Your Body with Expert Trainers & Modern Equipment in Saptapur, Dharwad.</p>
-    <a href="#contact" class="btn-primary">Join Now</a>
-  </div>
-</section>
-
-<section id="about">
-  <h2>About Our Gym in Dharwad</h2>
-  <p>
-    Torq Fitness And Education Center is a leading fitness center in Dharwad located near Saptapur.
-    We provide professional strength training, weight loss programs, and personal training
-    to help you achieve your fitness goals.
-  </p>
-
-  <div class="about-highlights">
-    <div class="highlight">✔ Modern Equipment</div>
-    <div class="highlight">✔ Certified Trainers</div>
-    <div class="highlight">✔ Weight Loss Programs</div>
-    <div class="highlight">✔ Strength Training</div>
-  </div>
-</section>
-
-<section id="services">
-  <h2>Our Fitness Services in Dharwad</h2>
-  <div class="card-container">
-
-    <div class="card">
-      <div class="card-icon">🏋️</div>
-      <h3>Strength Training</h3>
-      <p>Professional strength training programs designed for muscle growth and endurance.</p>
+<main>
+  <section class="hero" id="home">
+    <div class="container hero-content reveal">
+      <p class="eyebrow">Best Gym in Dharwad</p>
+      <h1>Torq Fitness And Education Center in Saptapur</h1>
+      <p class="lead">Transform your body with expert trainers, structured programs, and modern equipment built for real results.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Join Now</a>
+        <a href="#contact" class="btn btn-secondary">Free Trial</a>
+      </div>
+      <div class="hero-meta">
+        <div>
+          <strong>6:00 AM - 10:00 PM</strong>
+          <span>Mon - Sat</span>
+        </div>
+        <div>
+          <strong>Certified Coaches</strong>
+          <span>Strength and weight loss</span>
+        </div>
+        <div>
+          <strong>Premium Equipment</strong>
+          <span>Safe and modern machines</span>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <div class="card">
-      <div class="card-icon">🔥</div>
-      <h3>Weight Loss Program</h3>
-      <p>Customized workout and diet plans to help you lose weight effectively.</p>
+  <section id="about" class="section section-alt">
+    <div class="container about-grid">
+      <div class="about-media reveal">
+        <img src="gymimage.png" alt="Gym floor at Torq Fitness in Dharwad">
+        <div class="about-card">
+          <h3>Why Members Choose Us</h3>
+          <p>Personalized plans, proven coaching, and a supportive environment designed for long-term fitness.</p>
+        </div>
+      </div>
+
+      <div class="about-content reveal">
+        <h2>About Our Gym in Dharwad</h2>
+        <p>
+          Torq Fitness And Education Center is a leading fitness center in Dharwad located near Saptapur.
+          We provide professional strength training, weight loss programs, and personal training to help you
+          achieve your fitness goals.
+        </p>
+
+        <div class="about-highlights">
+          <div class="highlight">
+            <span class="highlight-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" role="img" aria-label="Modern equipment icon">
+                <rect x="4" y="10" width="16" height="4" rx="2"></rect>
+                <rect x="1" y="8" width="3" height="8" rx="1"></rect>
+                <rect x="20" y="8" width="3" height="8" rx="1"></rect>
+              </svg>
+            </span>
+            <div>
+              <h4>Modern Equipment</h4>
+              <p>Premium machines for safe, effective training.</p>
+            </div>
+          </div>
+          <div class="highlight">
+            <span class="highlight-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" role="img" aria-label="Certified trainers icon">
+                <circle cx="12" cy="7" r="4"></circle>
+                <path d="M4 21c1.5-4 6-6 8-6s6.5 2 8 6"></path>
+              </svg>
+            </span>
+            <div>
+              <h4>Certified Trainers</h4>
+              <p>Qualified coaches focused on measurable results.</p>
+            </div>
+          </div>
+          <div class="highlight">
+            <span class="highlight-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" role="img" aria-label="Weight loss icon">
+                <path d="M12 3c3 3 6 6 6 10a6 6 0 1 1-12 0c0-4 3-7 6-10z"></path>
+              </svg>
+            </span>
+            <div>
+              <h4>Weight Loss Programs</h4>
+              <p>Structured plans with diet and workout guidance.</p>
+            </div>
+          </div>
+          <div class="highlight">
+            <span class="highlight-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" role="img" aria-label="Strength training icon">
+                <path d="M7 12h10"></path>
+                <path d="M5 8v8"></path>
+                <path d="M19 8v8"></path>
+              </svg>
+            </span>
+            <div>
+              <h4>Strength Training</h4>
+              <p>Build strength, endurance, and confidence.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <div class="card">
-      <div class="card-icon">💪</div>
-      <h3>Personal Training</h3>
-      <p>One-on-one personal training sessions with certified gym trainers in Dharwad.</p>
+  <section id="services" class="section">
+    <div class="container">
+      <h2 class="reveal">Our Fitness Services in Dharwad</h2>
+      <div class="card-grid">
+        <article class="card reveal">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" role="img" aria-label="Strength training icon">
+              <rect x="3" y="10" width="18" height="4" rx="2"></rect>
+              <rect x="1" y="8" width="2" height="8" rx="1"></rect>
+              <rect x="21" y="8" width="2" height="8" rx="1"></rect>
+            </svg>
+          </div>
+          <h3>Strength Training</h3>
+          <p>Professional programs designed for muscle growth, endurance, and posture.</p>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" role="img" aria-label="Weight loss icon">
+              <path d="M12 3c3 3 6 6 6 10a6 6 0 1 1-12 0c0-4 3-7 6-10z"></path>
+            </svg>
+          </div>
+          <h3>Weight Loss Program</h3>
+          <p>Customized workout and nutrition plans for sustainable fat loss.</p>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-icon">
+            <svg viewBox="0 0 24 24" role="img" aria-label="Personal training icon">
+              <circle cx="12" cy="7" r="4"></circle>
+              <path d="M4 21c1.5-4 6-6 8-6s6.5 2 8 6"></path>
+            </svg>
+          </div>
+          <h3>Personal Training</h3>
+          <p>One-on-one coaching to accelerate your fitness transformation.</p>
+        </article>
+      </div>
     </div>
+  </section>
 
-  </div>
-</section>
+  <section id="plans" class="section section-alt">
+    <div class="container">
+      <h2 class="reveal">Membership Plans</h2>
+      <div class="card-grid">
+        <article class="plan-card reveal">
+          <h3>Monthly</h3>
+          <p class="plan-price">INR 1,299</p>
+          <ul class="plan-list">
+            <li>Full gym access</li>
+            <li>Trainer guidance</li>
+            <li>Monthly assessment</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary">Choose Monthly</a>
+        </article>
 
-<section id="seo-content">
-  <h2>Why We Are the Best Gym in Dharwad</h2>
-  <p>
-    If you are searching for the best gym near me in Dharwad, Torq Fitness And Education Center
-    offers expert coaching, advanced fitness equipment, and a motivating environment.
-    Our fitness center in Saptapur is trusted by members across Dharwad.
-  </p>
-</section>
+        <article class="plan-card highlight-card reveal">
+          <h3>Quarterly</h3>
+          <p class="plan-price">INR 3,499</p>
+          <ul class="plan-list">
+            <li>Everything in Monthly</li>
+            <li>Nutrition roadmap</li>
+            <li>Free body composition check</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary">Choose Quarterly</a>
+        </article>
 
-<section id="contact">
-  <h2>Contact Our Gym in Dharwad</h2>
+        <article class="plan-card reveal">
+          <h3>Yearly</h3>
+          <p class="plan-price">INR 11,999</p>
+          <ul class="plan-list">
+            <li>Everything in Quarterly</li>
+            <li>Priority trainer slots</li>
+            <li>Exclusive member events</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary">Choose Yearly</a>
+        </article>
+      </div>
+    </div>
+  </section>
 
-  <div class="contact-box">
-    <p><strong>Address:</strong> Near Pavan School, Saptapur, Dharwad, Karnataka</p>
-    <p><strong>Phone:</strong> +91XXXXXXXXXX</p>
-    <p><strong>Timings:</strong> Monday - Saturday | 6:00 AM - 10:00 PM</p>
-  </div>
+  <section id="trainers" class="section">
+    <div class="container">
+      <h2 class="reveal">Meet Our Trainers</h2>
+      <div class="card-grid">
+        <article class="trainer-card reveal">
+          <img src="gymimage.png" alt="Trainer Arjun, strength coach">
+          <div class="trainer-info">
+            <h3>Arjun Kulkarni</h3>
+            <p>Strength and conditioning specialist</p>
+          </div>
+        </article>
+        <article class="trainer-card reveal">
+          <img src="gymimage.png" alt="Trainer Nisha, weight loss coach">
+          <div class="trainer-info">
+            <h3>Nisha Desai</h3>
+            <p>Weight loss and functional training</p>
+          </div>
+        </article>
+        <article class="trainer-card reveal">
+          <img src="gymimage.png" alt="Trainer Vikram, performance coach">
+          <div class="trainer-info">
+            <h3>Vikram Patil</h3>
+            <p>Performance and mobility coach</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
 
-  <a href="https://wa.me/91XXXXXXXXXX" class="whatsapp-btn">
-    Chat on WhatsApp
-  </a>
+  <section id="testimonials" class="section section-alt">
+    <div class="container">
+      <h2 class="reveal">Member Testimonials</h2>
+      <div class="card-grid">
+        <article class="testimonial-card reveal">
+          <p>"I lost 8 kg in 3 months with the structured plan. The trainers keep you focused and motivated."</p>
+          <h3>Rohit K.</h3>
+          <span>Weight loss program</span>
+        </article>
+        <article class="testimonial-card reveal">
+          <p>"Great equipment, great vibe. I finally built consistency and strength without injuries."</p>
+          <h3>Ananya S.</h3>
+          <span>Strength training</span>
+        </article>
+        <article class="testimonial-card reveal">
+          <p>"The personal training sessions are worth it. Every workout is tailored to my goals."</p>
+          <h3>Sameer P.</h3>
+          <span>Personal coaching</span>
+        </article>
+      </div>
+    </div>
+  </section>
 
-  <div class="map">
-    <iframe 
-      src="https://www.google.com/maps?q=Torq+Fitness+And+Education+Center+Dharwad&output=embed"
-      width="100%" height="300" style="border:0;" loading="lazy">
-    </iframe>
-  </div>
-</section>
+  <section id="seo-content" class="section">
+    <div class="container">
+      <h2 class="reveal">Why We Are the Best Gym in Dharwad</h2>
+      <p class="reveal">
+        If you are searching for the best gym near me in Dharwad, Torq Fitness And Education Center
+        offers expert coaching, advanced fitness equipment, and a motivating environment.
+        Our fitness center in Saptapur is trusted by members across Dharwad.
+      </p>
+    </div>
+  </section>
+
+  <section id="contact" class="section section-alt">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Contact Our Gym in Dharwad</h2>
+        <p>Start your fitness journey with a free consultation and personalized plan.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-details reveal">
+          <h3>Start Your Fitness Journey</h3>
+          <p><strong>Address:</strong> Near Pavan School, Saptapur, Dharwad, Karnataka</p>
+          <p><strong>Phone:</strong> +91XXXXXXXXXX</p>
+          <p><strong>Timings:</strong> Monday - Saturday | 6:00 AM - 10:00 PM</p>
+          <a href="https://wa.me/91XXXXXXXXXX" class="btn whatsapp-btn">Chat on WhatsApp</a>
+        </div>
+
+        <form class="contact-form reveal">
+          <label>
+            Full Name
+            <input type="text" name="name" placeholder="Your name" required>
+          </label>
+          <label>
+            Phone Number
+            <input type="tel" name="phone" placeholder="Your phone" required>
+          </label>
+          <label>
+            Fitness Goal
+            <select name="goal" required>
+              <option value="">Select your goal</option>
+              <option value="weight-loss">Weight loss</option>
+              <option value="strength">Strength and muscle</option>
+              <option value="fitness">General fitness</option>
+            </select>
+          </label>
+          <button class="btn btn-primary" type="submit">Request a Call Back</button>
+          <p class="form-note">We respond within 24 hours during working days.</p>
+        </form>
+      </div>
+
+      <div class="map reveal">
+        <iframe
+          src="https://www.google.com/maps?q=Torq+Fitness+And+Education+Center+Dharwad&output=embed"
+          width="100%" height="300" style="border:0;" loading="lazy" title="Torq Fitness And Education Center map">
+        </iframe>
+      </div>
+    </div>
+  </section>
+</main>
 
 <footer>
-  <p>© 2026 Torq Fitness And Education Center | Best Gym in Dharwad</p>
+  <p>Copyright 2026 Torq Fitness And Education Center | Best Gym in Dharwad</p>
 </footer>
 
 <script src="script.js"></script>
@@ -131,7 +359,7 @@
   },
   "areaServed": "Dharwad",
   "telephone": "+91XXXXXXXXXX",
-  "priceRange": "₹₹"
+  "priceRange": "INR"
 }
 </script>
 
